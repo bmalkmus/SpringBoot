@@ -1,4 +1,4 @@
-package com.benjamin.malkmus.lil.learningspring;
+package com.bmalk.springboot.lil.learningspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

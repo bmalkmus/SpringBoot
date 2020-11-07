@@ -1,4 +1,4 @@
-package com.benjaminmalkmus.lil.learningspring;
+package com.bmalk.springboot.lil.learningspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
