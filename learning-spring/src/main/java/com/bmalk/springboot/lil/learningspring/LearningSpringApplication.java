@@ -18,7 +18,7 @@ public class LearningSpringApplication {
     }
 
     @RestController
-    @RequestMapping("/rooms")
+    @RequestMapping(value = "/rooms")
     public class RoomController{
         @Autowired
         private RoomRepository roomRepository;

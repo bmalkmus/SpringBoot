@@ -13,23 +13,24 @@ public class Room {
     @Id
     @Column(name="ROOM_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long roomID;
-    @Column(name="ROOM")
+    private long roomId;
+    @Column(name="NAME")
     private String roomName;
     @Column(name="ROOM_NUMBER")
     private String roomNumber;
     @Column(name="BED_INFO")
+    private String bedInfo;
 
-    public long getRoomID() {
-        return this.roomID;
+    public long getRoomId() {
+        return roomId;
     }
 
-    public void setRoomID(long roomID) {
-        this.roomID = roomID;
+    public void setRoomId(long roomId) {
+        this.roomId = roomId;
     }
 
     public String getRoomName() {
-        return this.roomName;
+        return roomName;
     }
 
     public void setRoomName(String roomName) {
@@ -37,7 +38,7 @@ public class Room {
     }
 
     public String getRoomNumber() {
-        return this.roomNumber;
+        return roomNumber;
     }
 
     public void setRoomNumber(String roomNumber) {
@@ -45,13 +46,12 @@ public class Room {
     }
 
     public String getBedInfo() {
-        return this.bedInfo;
+        return bedInfo;
     }
 
     public void setBedInfo(String bedInfo) {
         this.bedInfo = bedInfo;
     }
-    private String bedInfo;
 
 
 }
