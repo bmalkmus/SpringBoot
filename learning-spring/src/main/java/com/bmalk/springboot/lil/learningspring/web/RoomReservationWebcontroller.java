@@ -15,19 +15,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/reservations")
-public class RoomReservationWebcontroller {
-   
+public class RoomReservationWebController {
     private final ReservationService reservationService;
 
     @Autowired
-    public RoomReservationWebcontroller(ReservationService reservationService){
-        this.reservationService=reservationService;
+    public RoomReservationWebController(ReservationService reservationService) {
+        this.reservationService = reservationService;
     }
 
     @GetMapping
-    public String getReservations(@RequestParam(value = "date", required = false)String dateString, Model model){
+    public String getReservations(@RequestParam(value="date", required = false)String dateString, Model model){
         Date date = DateUtils.createDateFromDateString(dateString);
-        List <RoomReservation> roomReservations = this.reservationService.getRoomReservationForDate(date);
+        List<RoomReservation> roomReservations = this.reservationService.getRoomReservationsForDate(date);
         model.addAttribute("roomReservations", roomReservations);
         return "reservations";
     }
